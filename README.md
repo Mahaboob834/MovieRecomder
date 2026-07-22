@@ -19,14 +19,7 @@ movie-recommender/
     └── script.js            calls the backend via fetch()
 ```
 
-## ⚠️ Rotate your API key first
 
-Your original script had a live Gemini API key hardcoded in it. That key is
-compromised the moment it's shared anywhere (uploaded, committed, pasted).
-**Revoke it and generate a new one** at
-https://aistudio.google.com/app/apikey before doing anything else. Never put
-the new key in source code — it's read from the `GEMINI_API_KEY` environment
-variable (see `.env.example`).
 
 ## Run it locally
 
@@ -44,8 +37,6 @@ python app.py                # starts on http://localhost:5000
 Open http://localhost:5000 — the Flask app serves the frontend directly, so
 backend and frontend are already connected with nothing else to configure.
 
-If `GEMINI_API_KEY` isn't set, everything still works — you just won't get
-the "why you'll like these" blurb under each recommendation.
 
 ## How frontend and backend are connected
 
